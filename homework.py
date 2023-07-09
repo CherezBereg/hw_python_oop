@@ -90,8 +90,8 @@ class SportsWalking(Training):
         speed_in_sec: float = self.get_mean_speed() * self.KMH_IN_MSEC
         duration_in_m = self.duration * self.MIN_IN_H
         return ((self.CALORIES_WEIGHT_MULTIPLIER * self.weight
-                + (speed_in_sec ** 2 / height_in_meter)
-                * self.CALORIES_SPEED_HEIGHT_MULTIPLIER * self.weight)
+                 + (speed_in_sec ** 2 / height_in_meter)
+                 * self.CALORIES_SPEED_HEIGHT_MULTIPLIER * self.weight)
                 * duration_in_m)
 
 

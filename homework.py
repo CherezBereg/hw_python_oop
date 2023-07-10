@@ -65,8 +65,8 @@ class Running(Training):
 
     def get_spent_calories(self) -> float:
         duration_in_min = self.duration * self.MIN_IN_H
-        return ((self.CALORIES_MEAN_SPEED_MULTIPLIER * super().get_mean_speed()
-                 * self.CALORIES_MEAN_SPEED_SHIFT)
+        return ((self.CALORIES_MEAN_SPEED_MULTIPLIER
+                 * super().get_mean_speed() + self.CALORIES_MEAN_SPEED_SHIFT)
                 * self.weight / self.M_IN_KM * duration_in_min)
 
 

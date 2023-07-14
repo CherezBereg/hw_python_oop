@@ -137,6 +137,7 @@ def read_package(workout_type: str,
         'RUN': Running,
         'WLK': SportsWalking
     }
+
     try:
         if workout_type in activity_type:
             return activity_type[workout_type](*data)
